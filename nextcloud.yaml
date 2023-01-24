@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   annotations:
     deployment.kubernetes.io/revision: "1"
-  name: dev-nextcloud1
+  name: dev-nextcloud-cicd
   namespace: default
 spec:
   progressDeadlineSeconds: 600
@@ -27,7 +27,7 @@ spec:
       containers:
       - image: nextcloud
         imagePullPolicy: Always
-        name: con-nextcloud
+        name: con-nextcloud-cicd
         ports:
         - containerPort: 80
           name: nextcloud
